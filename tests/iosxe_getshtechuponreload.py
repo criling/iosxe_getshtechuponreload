@@ -30,4 +30,4 @@ fp.write(shtech+"\n\n")
 
 fp.close()
 
-cli.execute("reload command detected. Check /bootflash/reload_shtech.txt for show tech output")
+print("reload command detected. Check /bootflash/reload_shtech.txt for show tech output")
