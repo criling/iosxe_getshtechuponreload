@@ -21,7 +21,12 @@ This script relies on the IOS-XE guestshell, on-box python, and EEM
 
 Configure EEM to execute this script when someone issues a reload command. Example: 
 
-
+event manager applet shtech authorization bypass
+ event cli pattern "reload" sync yes occurs 1
+ action 0.01 syslog msg "Capturing sh tech before reload"
+ action 0.02 cli command "enable"
+ action 0.03 cli command "guestshell run python /bootflash/scripts/iosxe_getshtechuponreload.py"
+!
 
 ## Installation
 
