@@ -19,6 +19,7 @@ or implied.
 
 import cli
 
+timestamp = cli.execute("show clock")
 shtech = cli.execute("show tech-support")
 
 fp = open('/bootflash/reload_shtech.txt','w')
